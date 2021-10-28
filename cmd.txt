@@ -61,3 +61,15 @@ bundle add faker --group 'development'
 
 bundle update
 rails db:seed
+
+
+#9 - C de Controller
+Instalar o Insomnia -> https://insomnia.rest/
+https://www.ruby-toolbox.com/
+
+instalar -> gem active_model_serializers
+bundle add active_model_serializers
+
+rails g serializer hero
+
+rails routes
