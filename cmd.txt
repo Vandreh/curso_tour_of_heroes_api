@@ -1,4 +1,7 @@
-rails new curso_tour_of_heroes_api
+https://www.youtube.com/watch?v=qYEZOymyPzo&list=PLqsayW8DhUmuvgOX08aXYk6Y-HGrdYg20&index=11
+#7 - Criando a API
+
+rails new curso_tour_of_heroes_api --api
 
 entra no site do github e cria o repositorio
 git status
@@ -17,8 +20,44 @@ rails db:migrate
 rails -T
 git status
 git add .
+git commit -m "Cria estrutura para API Hero (scaffold)"
+git push
 
 
 
+#8 - M de Model
+rails s
+rails db
 
+rails c
+Hero.methods.sort
+hero = Hero.new
+hero.name = "Thor"
+hero.save
+hero = Hero.new
+hero.save
+exit (quit)
 
+rails c
+hero = Hero.new
+hero.save
+hero.errors.messages
+
+comando que depois tudo que fizer será desfeito quando sair (sandbox):
+rails c --sandbox
+Hero.create name: 'Sandbox'
+exit
+
+rails c
+1.methods.sort
+
+rails db:seed
+
+rails c
+Hero.methods.sort
+exit
+
+bundle add faker --group 'development'
+
+bundle update
+rails db:seed
