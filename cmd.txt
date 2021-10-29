@@ -73,3 +73,4 @@ bundle add active_model_serializers
 rails g serializer hero
 
 rails routes
+git merge --no-ff 10-token-parte-1
