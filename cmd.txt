@@ -71,6 +71,21 @@ instalar -> gem active_model_serializers
 bundle add active_model_serializers
 
 rails g serializer hero
+rails routes
+
+
+#10 - Token parte 1
+rails routes
+git branch
+git checkout -b 10-token-parte-1
+git branch
+git commit -am "Fixa erro de location ao criar url api/hero"
+
+rails secret (para gerar uma chave)
+EDITOR="code --wait" bin/rails credentials:edit
+
+git checkout master
+
 
 rails routes
 git merge --no-ff 10-token-parte-1
