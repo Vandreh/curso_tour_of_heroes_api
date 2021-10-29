@@ -80,8 +80,10 @@ git branch
 git checkout -b 10-token-parte-1
 git branch
 git commit -am "Fixa erro de location ao criar url api/hero"
+
 rails secret (para gerar uma chave)
 EDITOR="code --wait" bin/rails credentials:edit
 
+git checkout master
 
 
