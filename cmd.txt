@@ -114,4 +114,11 @@ exit
 
 git status
 git commit -am "Altera CRUD para token no banco de dados"
+git checkout master
+
+
+
+
+
+
 
