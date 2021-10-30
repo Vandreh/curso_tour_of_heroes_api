@@ -63,6 +63,7 @@ bundle update
 rails db:seed
 
 
+
 #9 - C de Controller
 Instalar o Insomnia -> https://insomnia.rest/
 https://www.ruby-toolbox.com/
@@ -72,6 +73,7 @@ bundle add active_model_serializers
 
 rails g serializer hero
 rails routes
+
 
 
 #10 - Token parte 1
@@ -89,3 +91,34 @@ git checkout master
 
 rails routes
 git merge --no-ff 10-token-parte-1
+git push
+git push origin 10-token-parte-1
+
+
+#11 - Token parte 2
+rails g migration AddTokenToHeroes token:string:index
+rails c
+Hero.delete_all
+rails db:migrate
+
+git branch
+git checkout -b 11-token-parte-2
+git add .
+git commit -m "Adiciona coluna token em Heroes"
+
+rails c
+hero_params = { name: "Thor"}
+hero_params.to_h.merge!({ token: 123 })
+hero_params
+exit
+
+git status
+git commit -am "Altera CRUD para token no banco de dados"
+git checkout master
+
+
+
+
+
+
+
