@@ -106,3 +106,12 @@ git checkout -b 11-token-parte-2
 git add .
 git commit -m "Adiciona coluna token em Heroes"
 
+rails c
+hero_params = { name: "Thor"}
+hero_params.to_h.merge!({ token: 123 })
+hero_params
+exit
+
+git status
+git commit -am "Altera CRUD para token no banco de dados"
+
