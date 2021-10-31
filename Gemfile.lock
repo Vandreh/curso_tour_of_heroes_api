@@ -76,15 +76,11 @@ GEM
     erubi (1.10.0)
     faker (2.19.0)
       i18n (>= 1.6, < 2)
-    ffi (1.15.4-x64-mingw32)
     globalid (0.5.2)
       activesupport (>= 5.0)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
     jsonapi-renderer (0.2.2)
-    listen (3.7.0)
-      rb-fsevent (~> 0.10, >= 0.10.3)
-      rb-inotify (~> 0.9, >= 0.9.10)
     loofah (2.12.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -132,10 +128,6 @@ GEM
       rake (>= 0.13)
       thor (~> 1.0)
     rake (13.0.6)
-    rb-fsevent (0.11.0)
-    rb-inotify (0.10.1)
-      ffi (~> 1.0)
-    spring (3.0.0)
     sprockets (4.0.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -162,11 +154,9 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
   faker (~> 2.19)
-  listen (~> 3.3)
   pg (~> 1.2)
   puma (~> 5.0)
   rails (~> 6.1.4, >= 6.1.4.1)
-  spring
   sqlite3 (~> 1.4)
   tzinfo-data
 
