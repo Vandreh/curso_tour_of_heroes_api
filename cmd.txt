@@ -125,6 +125,13 @@ git push
 #12 - Deploy da API
 git branch
 git checkout -b 12-deploy-api
+bundle add pg --skip-install
+bundle install --without production
+
+# bundle install --without production
+[DEPRECATED] The `--without` flag is deprecated because it relies on being remembered across bundler invocations, which bundler will no longer do in future versions. Instead please use `bundle config set --local without 'production'`, and stop using this flag
+
+https://dashboard.heroku.com/apps/curso-tour-of-heros-api/deploy/heroku-git
 
 
 
