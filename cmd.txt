@@ -133,6 +133,8 @@ bundle install --without production
 
 https://dashboard.heroku.com/apps/curso-tour-of-heros-api/deploy/heroku-git
 
+git checkout master
+
 
 
 
