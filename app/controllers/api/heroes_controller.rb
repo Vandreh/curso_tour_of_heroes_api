@@ -20,7 +20,7 @@ class Api::HeroesController < ApplicationController
 
   # POST /heroes
   def create
-    @hero = Hero.new(hero_params.to_h.merge!({token: @token}))
+    @hero = Hero.new(hero_params.to_h.merge!({ token: @token }))
 
     if @hero.save
       render json: @hero, status: :created, location: api_hero_url(@hero)
