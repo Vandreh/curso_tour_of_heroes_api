@@ -140,6 +140,15 @@ git push
 rails secret
 https://curso-tour-of-heros-api.herokuapp.com/
 
+C:\Users\esmer\Projects>md Angular
+cd Angular
+git clone https://github.com/peimelo/heroes-crud.git
+dir
+cd heroes-crud
+C:\Users\esmer\Projects\Angular\heroes-crud>code .
 
-
+git status
+git add .
+git commit -m "Adiciona frontend no projeto"
+git push
 
