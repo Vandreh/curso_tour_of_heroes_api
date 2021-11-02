@@ -7,7 +7,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    #  origins '*' ou 'example.com' (inserir aqui o site do frontend)  
+    #  origins '*' ou 'example.com' (inserir aqui o site do frontend)
     origins '*'
 
     resource '*',
