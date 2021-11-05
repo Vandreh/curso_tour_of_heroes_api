@@ -178,3 +178,10 @@ bin/rails db:migrate RAILS_ENV=test
 rspec
 bundle add simplecov
 
+git checkout -b 14-configurando-testes
+git add .
+git status
+git commit -m "Adiciona rspec, shoulda-matchers, simplecov e circleci"
+git checkout master
+git merge --no-ff 14-configurando-testes
+git push
