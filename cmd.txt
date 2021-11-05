@@ -157,8 +157,24 @@ para comentar linhas de codigo em vscode: ctrl+k+c, para descomentar ctrl+k+u
 
 
 
+#13 - Como Debugar
+byebug # comando "help" no terminal, "help list", "list=", "@hero", @token, @hero.persisted? (comando para saber se ja esta gravado no banco), "continue", "next", "@hero.errors", "@hero.errors.messages", "list-", "list=", "continue", "next", "@hero", "@hero.persisted?"
+
+#gems para debugar visualmente
+gem install ruby-debug-ide
+gem install ruby-debug-ide --no-document
+gem install debase
 
 
 
-
+#14 Configurando Testes -> https://www.youtube.com/watch?v=K2l6aE2NxfI&list=PLqsayW8DhUmuvgOX08aXYk6Y-HGrdYg20&index=17
+bundle add rspec-rails
+bundle
+# em macOS precisa rodar esse codigo: rbenv rehash
+rails g rspec:install
+bundle add shoulda-matchers
+rspec
+bin/rails db:migrate RAILS_ENV=test
+rspec
+bundle add simplecov
 
