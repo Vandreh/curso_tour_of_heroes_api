@@ -1,4 +1,3 @@
-#
 class Api::HeroesController < ApplicationController
   include Authenticable
 
@@ -9,6 +8,11 @@ class Api::HeroesController < ApplicationController
   # GET /heroes
   def index
     @heroes = Hero.by_token(@token).search(params[:term]).sorted_by_name
+
+    # puts "====> #{params}"
+    # p "====> TOKEN: #{@token}"
+    # logger.debug "====> TOKEN: #{@token}"
+    # logger.info "====> TOKEN: #{@token}"
 
     render json: @heroes
   end
@@ -21,6 +25,8 @@ class Api::HeroesController < ApplicationController
   # POST /heroes
   def create
     @hero = Hero.new(hero_params.to_h.merge!({ token: @token }))
+
+    # byebug comandos no terminal, "help", "help list", "list=", "@hero", @token, @hero.persisted? (comando para saber se ja esta gravado no banco), "continue", "next", "@hero.errors", "@hero.errors.messages", "list-", "list=", "continue", "next", "@hero", "@hero.persisted?"
 
     if @hero.save
       render json: @hero, status: :created, location: api_hero_url(@hero)
