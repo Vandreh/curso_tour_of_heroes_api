@@ -185,3 +185,24 @@ git commit -m "Adiciona rspec, shoulda-matchers, simplecov e circleci"
 git checkout master
 git merge --no-ff 14-configurando-testes
 git push
+git add .
+git commit -m "Corrigindo ruby 2.7.2 para 3.0.2 no arquivo coverage/config.yml"
+https://app.circleci.com/pipelines/github/Vandreh/curso_tour_of_heroes_api?branch=master
+
+
+#15 - Teste: Models/Routes
+git checkout -b 14-testes-models-routes
+rspec
+rails c
+Hero.all.to_sql
+Hero.by_token('123').to_sql
+quit
+
+
+
+
+
+
+
+
+
