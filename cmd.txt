@@ -198,6 +198,10 @@ Hero.all.to_sql
 Hero.by_token('123').to_sql
 quit
 
+rails g scaffold User name:string
+rails d scaffold User
+
+rspec spec/routing
 
 
 
