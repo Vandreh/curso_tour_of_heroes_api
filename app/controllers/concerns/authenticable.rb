@@ -7,7 +7,7 @@ module Authenticable
 
     unless valid_token?
       # render json: { errors: 'Você não tem autorização para essa operação.'},
-      render json: { errors: 'Forneça um header Authorization para se identificar (Qualquer um com pelo menos 10 caracteres).'},
+      render json: { errors: 'Provide an Authorization header to identify yourself (Any at least 10 characters long)' },
              status: :unauthorized
     end
   end
