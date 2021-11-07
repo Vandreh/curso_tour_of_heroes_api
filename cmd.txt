@@ -202,7 +202,23 @@ rails g scaffold User name:string
 rails d scaffold User
 
 rspec spec/routing
+rspec
 
+git checkout master
+git branch
+git branch -m 14-testes-models-routes 15-testes-models-routes
+git merge 15-testes-models-routes
+git tag 1.0.1
+git push --tags
+git push origin 15-testes-models-routes
+git push origin 14-configurando-testes
+git push
+
+
+
+#16 - Teste: Requests
+rspec
+git rm -rf coverage
 
 
 
