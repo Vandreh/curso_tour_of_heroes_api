@@ -7,7 +7,7 @@ class Api::HeroesController < ApplicationController
 
   # GET /heroes
   def index
-    @heroes = Hero.by_token(@token).search(params[:term]).sorted_by_name
+    @heroes = Hero.by_token(@token).search(params[:name]).sorted_by_name
 
     # puts "====> #{params}"
     # p "====> TOKEN: #{@token}"
