@@ -241,7 +241,7 @@ git merge --no-ff 16-test-requests
 git push origin 16-test-requests
 git tag v1.0.2
 git push --tags
-git checkout -b 17-teste-ajustes
+git checkout -b 17-teste-ajustes-finais
 
 bundle update
 bundle add spring-commands-rspec
@@ -269,7 +269,8 @@ duplicar varias linhas -> alt + shift + down
 bin/rspec
 bin/spring rspec
 
-
+git checkou master
+git merge --no-ff 17-teste-ajustes
 
 
 
