@@ -216,6 +216,7 @@ git push
 
 
 
+
 #16 - Teste: Requests
 rspec
 git rm -rf coverage
@@ -229,6 +230,53 @@ rails d scaffold Api::User
 rspec spec/requests/api/heroes_spec.rb:20
 rspec spec/requests/api/heroes_spec.rb:71
 rspec spec/requests/api/heroes_spec.rb
+
+
+
+
+#17 - Teste: Ajustes Finais
+git branch 16-test-requests
+git reset --hard HEAD~8
+git merge --no-ff 16-test-requests
+git push origin 16-test-requests
+git tag v1.0.2
+git push --tags
+git checkout -b 17-teste-ajustes-finais
+
+bundle update
+bundle add spring-commands-rspec
+bundle exec spring binstub rspec
+time rspec
+bin/spring status
+bin/spring
+bin/spring server
+time bin/rspec
+
+bundle add factory_bot_rails
+https://github.com/thoughtbot/factory_bot/blob/master/GETTING_STARTED.md
+
+rails c
+FactoryBot.build :hero
+FactoryBot.attributes_for :hero
+FactoryBot.create :hero
+exit
+
+bin/rspec spec/models
+bin/rspec spec/requests
+
+duplicar varias linhas -> alt + shift + down
+
+bin/rspec
+bin/spring rspec
+
+git checkou master
+git merge --no-ff 17-teste-ajustes
+
+
+
+
+
+
 
 
 
