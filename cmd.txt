@@ -232,5 +232,25 @@ rspec spec/requests/api/heroes_spec.rb
 
 
 
+#17 - Teste: Ajustes Finais
+git branch 16-test-requests
+git reset --hard HEAD~8
+git merge --no-ff 16-test-requests
+git push origin 16-test-requests
+git tag v1.0.2
+git push --tags
+git checkout -b 17-teste-ajustes
+
+bundle update
+bundle add spring-commands-rspec
+bundle exec spring binstub rspec
+time rspec
+bin/spring status
+bin/spring
+bin/spring server
+time bin/rspec
+
+
+
 
 
