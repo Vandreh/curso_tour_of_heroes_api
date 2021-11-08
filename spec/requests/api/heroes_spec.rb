@@ -2,13 +2,8 @@ require 'rails_helper'
 
 # rubocop: disable Metrics/BlockLength
 RSpec.describe '/api/heroes', type: :request do
-  # let(:name) { 'wonder woman' }
-  # let(:token) { '1234567890' }
   let(:valid_attributes) { attributes_for :hero }
-  # { name: name, token: token }
   let(:invalid_attributes) { attributes_for :invalid_hero }
-  # { name: nil, token: token }
-
   let(:valid_headers) do
     { Authorization: valid_attributes[:token] }
   end
@@ -29,7 +24,7 @@ RSpec.describe '/api/heroes', type: :request do
 
     context 'without headers' do
       it 'renders a JSON response with an unauthorized status' do
-        Hero.create! valid_attributes
+        # Hero.create! valid_attributes
         get api_heroes_url, as: :json
         expect(response).to have_http_status(:unauthorized)
       end
@@ -37,7 +32,7 @@ RSpec.describe '/api/heroes', type: :request do
 
     context 'with invalid headers' do
       it 'renders a JSON response with an unauthorized status' do
-        Hero.create! valid_attributes
+        # Hero.create! valid_attributes
         get api_heroes_url, headers: invalid_headers, as: :json
         expect(response).to have_http_status(:unauthorized)
       end
