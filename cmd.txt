@@ -223,7 +223,12 @@ git rm -rf coverage
 gem list rubocop
 rubocop -l
 
+rails g scaffold Api::User name:string
+rails d scaffold Api::User
 
+rspec spec/requests/api/heroes_spec.rb:20
+rspec spec/requests/api/heroes_spec.rb:71
+rspec spec/requests/api/heroes_spec.rb
 
 
 
