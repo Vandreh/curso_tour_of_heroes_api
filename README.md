@@ -51,7 +51,7 @@ The backend is available at `http://localhost:3000`.
 
 ## Tests
 
-![Tests](https://github.com/peimelo/curso_tour_of_heroes_api/actions/workflows/ruby.yml/badge.svg)
+[![CircleCI](https://circleci.com/gh/Vandreh/curso_tour_of_heroes_api.svg?style=svg)](https://circleci.com/gh/Vandreh/curso_tour_of_heroes_api)
 
 To run the tests:
 
