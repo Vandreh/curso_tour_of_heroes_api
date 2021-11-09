@@ -273,6 +273,8 @@ git checkou master
 git merge --no-ff 17-teste-ajustes
 git push origin 17-teste-ajustes-finais
 
+bin/rails app:update
+
 
 
 
